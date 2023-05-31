@@ -1,0 +1,159 @@
+*{
+    box-sizing: border-box;
+}
+body
+{
+    background:#f1f1f1;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px
+}
+/* header/blog Title*/
+.header
+{
+    padding: 30px;
+    text-align: center;
+    background: white;
+}
+.header1
+{
+    font-size: 50px;
+}
+/* style the top navigation bar */
+.topnav {
+overflow: hidden;
+background-color: #333;
+}
+/* style the topnav links */
+.topnav a:hover
+{
+float: left;
+display: flex;
+color: rgb(205, 37, 37);
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+/* change color on hover */
+.topnav  a {
+    background-color:#a29dc0;
+    border-radius: 3px;
+    padding: 7px 13px;
+    width: 100px;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #333;
+    float :right;
+    line-height: 80px;
+    margin-right: 40px; 
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media( wax-width :952px){
+    label.home{
+        font-size: 30px;
+        padding-left: 50px; 
+
+    }
+    .topnav a {
+        font-size: 16px;
+        } 
+    }
+    @media (max-widht:858){
+        .checkbtn{
+            display: block;
+        }
+   a{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all.5s;
+   }
+   nav div {
+    display: block;
+   margin: 50px 0;
+   line-height: 30px;
+}
+   nav div a {
+  font-size: 20px;
+   }
+   a:hover,a.active{
+    background: none;
+    color: #0082e6;
+   }
+   #check:checked ~ a{
+    left: 0;
+   }
+}
+   section{
+    background: url(bgl.jpg)no-repeat;
+    background-size: cover;
+    height: calc( 100vh -80px);
+   }
+
+/* Create two unequal columns that floats next to each other */
+/*left coloumn */
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+/* right coloumn */
+.rightcolumn
+{
+    float:left ;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+/*  image */
+.fakeimage{
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+/* add card effect for articles */
+.card{
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+/* cover floats after the columns */
+.row::after{
+    content:"";
+    display: table;
+    clear: both;
+}
+/* Footer */
+.footer{
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+/* Responsive layout - when screen is less than 786px wide,make the two columns 
+stack on top of each other instead of text to each other */
+@media  only screen and ( max-widht:786px){
+    .leftcolumn,.rightcolumn{
+        display: block; 
+        width: 100%;
+        padding-bottom: 30px;    
+    }
+}
+/* Responsive layout - when the screen is less then 400px wide, make the navigation links 
+stack on top of each other instead of next to each other */
+@media  only screen and (max-widht:400px){
+    .topnav a {
+        width: 100%;
+        float: none;
+    }
+}
+
+
+
